@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="text-center mb-4">
+        <h2 class="fw-bold">Welcome, {{ current_user.username }}! 💪</h2>
+        <p class="lead">What would you like to do today?</p>
+    </div>
+
+    <div class="row justify-content-center">
+        <!-- Workout Plans -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100 text-center">
+                <div class="card-body">
+                    <i class="bi bi-clipboard-check fs-1 mb-3"></i>
+                    <h5 class="card-title">Workout Plans</h5>
+                    <p class="card-text">Choose from custom workout routines tailored to your goals.</p>
+                    <a href="{{ url_for('main.dynamic_workout') }}" class="btn btn-outline-primary">Explore Workouts</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Diet Plans -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100 text-center">
+                <div class="card-body">
+                    <i class="bi bi-egg-fried display-4 mb-3 text-success"></i>
+                    <h5 class="card-title">Diet Plans</h5>
+                    <p class="card-text">Find personalized meal plans to fuel your fitness journey.</p>
+                    <a href="{{ url_for('main.dynamic_diet') }}" class="btn btn-outline-success">View Diets</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- BMI Calculator -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100 text-center">
+                <div class="card-body">
+                    <i class="bi bi-bar-chart-line display-4 mb-3 text-warning"></i>
+                    <h5 class="card-title">BMI Calculator</h5>
+                    <p class="card-text">Track your progress and stay on top of your transformation.</p>
+                    <a href="{{ url_for('main.bmi') }}" class="btn btn-outline-warning">Check BMI</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-5">
+        <a href="{{ url_for('main.fitness_profile') }}" class="btn btn-outline-dark">🔧 View / Edit Fitness Profile</a>
+    </div>
+
+    {% if not current_user.goal or not current_user.routine %}
+    <div class="alert alert-warning text-center mt-4">
+        <strong>Heads up!</strong> You haven't completed your fitness profile. Some features may not be personalized yet.
+        <br>
+        <a href="{{ url_for('main.fitness_profile') }}" class="btn btn-sm btn-outline-secondary mt-2">Complete Profile Now</a>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

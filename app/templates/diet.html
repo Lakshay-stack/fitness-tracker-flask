@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block title %}Diet Plans{% endblock %}
+
+{% block content %}
+<h1 class="mb-4 text-center">🍽 Diet Plans</h1>
+<p class="lead text-center">Explore sample meals tailored for your goals. Full detailed plans are unlocked after registration.</p>
+
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+    <!-- Fat Loss Plan -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="{{ url_for('static', filename='images/fatloss.jpg') }}" class="card-img-top" style="height: 220px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title">Fat Loss Meal Plan 🔥</h5>
+          <p class="card-text">Structured for calorie deficit and fat burn.</p>
+          <ul>
+            <li>Oats + Berries + Protein Shake (350 kcal)</li>
+            <li>Grilled Chicken + Quinoa + Broccoli (450 kcal)</li>
+            <li>Greek Yogurt + Almonds (200 kcal)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Muscle Gain Plan -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="{{ url_for('static', filename='images/musclegain.jpg') }}" class="card-img-top" style="height: 220px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title">Muscle Gain Plan 💪</h5>
+          <p class="card-text">Designed for lean mass and strength building.</p>
+          <ul>
+            <li>Peanut Butter Toast + Banana + Eggs (500 kcal)</li>
+            <li>Rice + Chicken + Olive Oil (700 kcal)</li>
+            <li>Protein Shake + Granola Bar (400 kcal)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- High Energy Plan -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="{{ url_for('static', filename='images/highenergy.jpg') }}" class="card-img-top" style="height: 220px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title">High Energy Plan ⚡</h5>
+          <p class="card-text">For active individuals needing high caloric intake.</p>
+          <ul>
+            <li>Avocado Toast + Eggs + Smoothie (600 kcal)</li>
+            <li>Beef Bowl + Rice + Beans (800 kcal)</li>
+            <li>Nuts + Trail Mix + Cottage Cheese (450 kcal)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vegetarian Plan -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="{{ url_for('static', filename='images/veg.jpg') }}" class="card-img-top" style="height: 220px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title">Vegetarian Plan 🌱</h5>
+          <p class="card-text">Balanced plant-based nutrition for all fitness levels.</p>
+          <ul>
+            <li>Tofu Scramble + Toast + Fruit (400 kcal)</li>
+            <li>Lentil Curry + Rice + Spinach (600 kcal)</li>
+            <li>Smoothie + Nuts (300 kcal)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA -->
+  <div class="text-center mt-5">
+    <a href="{{ url_for('main.register') }}" class="btn btn-success btn-lg">Unlock Full Diet Plans – Register Now</a>
+  </div>
+</div>
+{% endblock %}

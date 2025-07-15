@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+{% block title %}Home - Backbencher's Fitness{% endblock %}
+
+{% block content %}
+<br>
+<br>
+<!-- Hero Section with Logo Background -->
+<center>
+<div class="overlay-box text-center">
+    <h1>Welcome to Backbencher's Fitness</h1>
+    <p>Your journey to fitness begins now.</p>
+    <a href="{{ url_for('main.login') }}" class="btn btn-lg btn-success">Get Started →</a>
+</div>
+
+</center>
+<br>
+<br>
+<!-- About Me Section -->
+<section class="bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-4"><b>My Journey</b></h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-center">
+        <p class="lead">
+          My name is Lakshay, and I started my fitness journey at the age of 18. Back then, I weighed just 47 kg, was underconfident, and struggled with my self-image. I knew something had to change — not just physically, but mentally.
+        </p>
+        <p>
+          Over the past 4 years, through sheer discipline, patience, and relentless self-belief, I transformed myself — not just in appearance, but in mindset. Today at 22, I weigh 77 kg, feel confident, energized, and more focused than ever before.
+        </p>
+        <p>
+          Backbencher's Fitness was born from that same fire — to help others like me. If you're starting from zero, feeling lost, or just tired of fake motivation and gimmicks, you’re in the right place. This platform is built on honesty, simplicity, and real results.
+        </p>
+        <p class="fw-semibold mt-3">
+          I believe anyone can change — not overnight, but with consistent habits, structure, and support.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What We Offer Section -->
+<section class="mt-5 container">
+    <h2 class="text-center mb-4"><b>What We Offer</b></h2>
+    <div class="row text-center">
+       <!-- What We Offer Section -->
+<div class="col-md-4">
+    <div class="card h-100 text-center">
+        <div class="card-body">
+            <i class="bi bi-bar-chart-line fs-1 mb-3"></i>
+            <h5 class="card-title">Progress Tracking</h5>
+            <p class="card-text">Monitor your body transformation using BMI and other tools.</p>
+            <a href="{{ url_for('main.bmi') }}" class="btn btn-outline-success btn-lg">Track Now</a>
+        </div>
+    </div>
+</div>
+        <div class="col-md-4">
+    <div class="card h-100 text-center">
+        <div class="card-body">
+            <i class="bi bi-clipboard-check fs-1 mb-3"></i>
+            <h5 class="card-title">Custom Workout Plans</h5>
+            <p class="card-text">Choose from beginner to advanced routines, updated weekly.</p>
+            <a href="{{ url_for('main.bmi') }}" class="btn btn-outline-success btn-lg">Workout Plan</a>
+        </div>
+    </div>
+</div>
+
+           <div class="col-md-4">
+    <div class="card h-100 text-center">
+        <div class="card-body">
+            <i class="bi bi-egg-fried fs-1 mb-3"></i>
+            <h5 class="card-title">Nutrition Guidance</h5>
+            <p class="card-text">Explore personalized meal plans and macro breakdowns.</p>
+            <a href="{{ url_for('main.bmi') }}" class="btn btn-outline-success btn-lg">Diet Plan</a>
+        </div>
+    </div>
+</div>
+
+
+</section>
+
+<br>
+<br>
+
+
+<!-- About Section -->
+<section class="bg-light py-5">
+    <div class="container text-center">
+        <h2><b>About Backbencher's Fitness</b></h2>
+        <p class="mt-3">
+            I started as students and fitness rookies — and built a platform for people just like us.
+            Whether you're a beginner or getting back on track, we help you create real results with
+            practical, no-excuse fitness and nutrition guidance.
+        </p>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="my-5 container">
+    <h2 class="text-center mb-4"><b>What Our Users Say</b></h2>
+    <div class="row">
+        <div class="col-md-6">
+            <blockquote class="blockquote text-center">
+                <p>"Lost 10kg in 3 months — thanks to their simple diet & home workouts!"</p>
+                <footer class="blockquote-footer">Aman</footer>
+            </blockquote>
+        </div>
+        <div class="col-md-6">
+            <blockquote class="blockquote text-center">
+                <p>"I finally feel confident in the gym — love the beginner routines."</p>
+                <footer class="blockquote-footer">Jas</footer>
+            </blockquote>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA Section -->
+<section class="bg-dark text-white text-center py-5">
+    <h3><b>Ready to Transform?</b></h3>
+    <p class="lead">Join Backbencher's Fitness and start your journey today!</p>
+    <a href="{{ url_for('main.register') }}" class="btn btn-success btn-lg mt-3">
+        Join Now →
+    </a>
+</section>
+<!-- Contact Us Section with Form -->
+<section class="bg-light text-dark py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Contact Us</h2>
+        <form method="POST" action="#" class="mx-auto" style="max-width: 600px;">
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="mb-3">
+                <input type="email" class="form-control" placeholder="Your Email" required>
+            </div>
+            <div class="mb-3">
+                <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-success">Send Message</button>
+            </div>
+        </form>
+    </div>
+</section>
+<!-- Contact Us Section -->
+<section class="bg-light text-dark py-5">
+    <div class="container text-center">
+
+        <p class="mb-2">📧 Email: <a href="mailto:lgirdher14@gmail.com">lgirdher14@gmail.com</a></p>
+        <p class="mb-2">📱 Facebook: <a href="https://www.facebook.com/backbenchersfitness/" target="_blank">@Backbencher'sfitness</a></p>
+        <p class="mb-2">📍 Location: Online | Available Worldwide</p>
+        <p class="mt-4">Feel free to reach out with any questions, collaborations, or to share your progress!</p>
+    </div>
+</section>
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <div class="container">
+        <p class="mb-0">&copy; {{ current_year }} Backbencher's Fitness. All rights reserved.</p>
+    </div>
+</footer>
+
+
+{% endblock %}

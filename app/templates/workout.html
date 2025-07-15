@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}Workout Plans{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">🏋️ Workout Plans</h1>
+<p class="lead">Discover tailored workout programs to match your fitness goals. Here’s a glimpse of what we offer:</p>
+<br>
+<br>
+
+<div class="container">
+
+    <!-- Plan 1 -->
+    <div class="row align-items-center mb-5">
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='images/fullbody.jpg') }}" class="img-fluid rounded shadow-sm" style="width: 100%; height: 300px; object-fit: cover;">
+        </div>
+        <div class="col-md-6">
+            <h4>Beginner Full Body Routine</h4>
+            <p>Start strong with foundational movements like squats, pushups, rows, and planks. 🔒 <em>Full plan available after registration.</em></p>
+        </div>
+    </div>
+
+    <!-- Plan 2 -->
+    <div class="row align-items-center mb-5">
+        <div class="col-md-6 order-md-2">
+            <img src="{{ url_for('static', filename='images/pushpulllegs2.jpg') }}" class="img-fluid rounded shadow-sm" style="width: 100%; height: 300px; object-fit: cover;">
+        </div>
+        <div class="col-md-6 order-md-1">
+            <h4>Push-Pull-Legs Split</h4>
+            <p>Boost muscle growth by training different muscle groups each day. 🔒 <br><em>Unlock weekly schedule after signup.</em></p>
+        </div>
+    </div>
+
+    <!-- Plan 3 -->
+    <div class="row align-items-center mb-5">
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='images/fatburner.jpg') }}" class="img-fluid rounded shadow-sm" style="width: 100%; height: 300px; object-fit: cover;">
+        </div>
+        <div class="col-md-6">
+            <h4>HIIT Fat Burner</h4>
+            <p>Short on time? Try high-intensity intervals to torch fat and build endurance. 🔒<br> <em>Access details after joining.</em></p>
+        </div>
+    </div>
+
+    <!-- Plan 4 -->
+    <div class="row align-items-center mb-5">
+        <div class="col-md-6 order-md-2">
+            <img src="{{ url_for('static', filename='images/strength.jpg') }}" class="img-fluid rounded shadow-sm" style="width: 100%; height: 300px; object-fit: cover;">
+        </div>
+        <div class="col-md-6 order-md-1">
+            <h4>Strength Training Plan</h4>
+            <p>Focused on progressive overload to build pure strength with compound lifts. 🔒 <em> <br>See full program inside.</em></p>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-5">
+        <a href="{{ url_for('main.register') }}" class="btn btn-primary btn-lg">Get Full Access – Register Now</a>
+    </div>
+
+</div>
+{% endblock %}
