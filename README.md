@@ -1,38 +1,61 @@
-# 🏋️ Fitness Tracker Flask App
+# Fitness Tracker Flask App
 
-A fully functional fitness tracking web application built with **Flask**, allowing users to register, track their fitness progress, get personalized **workout** and **diet plans**, and calculate their **BMI**.
+A web-based fitness tracking app built with Flask that helps users track fitness goals, get personalized diet and workout plans, and monitor BMI and body fat.
+
+---
 
 ## 🚀 Features
 
-- 🔐 User Registration & Login
-- 📋 Fitness Profile with Goal & Routine
-- 📊 BMI Calculator with Recommendations
-- 💪 Personalized Workout Plans (Goal + Routine-based)
-- 🍽 Custom Diet Plans
-- 📞 Contact Us Page
-- 🖼 Beautiful Bootstrap-based UI
-- 🗄 SQLite Database Integration
+- User Registration & Login
+- Fitness profile form (age, weight, height, fat %, goals)
+- Personalized workout and diet plan display
+- BMI calculator with daily macros suggestion
+- Dashboard & contact page
+- Simple design using HTML/CSS and Flask
 
-## 🛠 Tech Stack
+---
 
-- Python (Flask Framework)
-- HTML, CSS, Bootstrap
-- Jinja2 Templating
-- SQLite (SQLAlchemy ORM)
-- Flask-Login for Authentication
+## 📸 Screenshots
 
-## 🧠 Logic Highlights
+### 🏠 Home Page
+![Home1](screenshots/home1.png)
+![Home2](screenshots/home2.png)
 
-- 9 Combinations of Goal + Routine (e.g., Build Muscle + Beginner)
-- Smart Template Routing Based on User Profile
-- Fallback if data is missing
+### 📝 Registration Page
+![Register](screenshots/register.png)
 
-## 📦 Setup Instructions
+### 📥 Fitness Profile Plan Page
+![Plan](screenshots/plan.png)
 
+### 🥗 Diet Plan
+![Diet](screenshots/diet.png)
+
+### 🏋️ Workout Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### ⚖️ BMI Calculation Page
+![BMI](screenshots/bmi.png)
+
+### 📂 Folder Structure
+![Folder](screenshots/folder.png)
+
+### 📞 Contact Page
+![Contact](screenshots/contact.png)
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: HTML, CSS
+- **Backend**: Python (Flask)
+- **Database**: SQLite + SQLAlchemy ORM
+- **Tools**: Flask-WTF, Jinja2, WTForms
+
+---
+
+## 💻 Run Locally
+
+1. Clone this repo:
 ```bash
 git clone https://github.com/Lakshay-stack/fitness-tracker-flask.git
 cd fitness-tracker-flask
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r requirements.txt
-python run.py
